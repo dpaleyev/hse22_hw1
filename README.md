@@ -28,8 +28,8 @@ ls sub* matepairs* | xargs -tI{} fastqc -o fastqc {}
 mkdir multiqc
 multiqc -o multiqc fastqc
 ```
-![Скрин]()
-![Скрин2]()
+![Скрин](https://github.com/dpaleyev/hse22_hw1/blob/master/screenshots/screen1.png)
+![Скрин2](https://github.com/dpaleyev/hse22_hw1/blob/master/screenshots/screen2.png)
 
 4. С помощью программ platanus_trim и platanus_internal_trim подрезаем чтение по качеству.
 ```
@@ -51,8 +51,8 @@ ls sub* matepairs*| xargs -tI{} fastqc -o fastqc_trim {}
 mkdir multqctrim
 multiqc -o multqctrim fastqc_trim
 ```
-![Скрин3]()
-![Скрин4]()
+![Скрин3](https://github.com/dpaleyev/hse22_hw1/blob/master/screenshots/screen3.png)
+![Скрин4](https://github.com/dpaleyev/hse22_hw1/blob/master/screenshots/screen4.png)
 
 7. С помощью программы “platanus assemble” собираем контиги.
 ```
@@ -68,4 +68,4 @@ time platanus scaffold -o Poil -c Poil_contig.fa -IP1 sub1.fastq.trimmed sub2.fa
 time platanus gap_close -o Poil -c Poil_scaffold.fa -IP1 sub1.fastq.trimmed sub2.fastq.trimmed -OP2 matepairs.fastq.int_trimmed  matepairs2.fastq.int_trimmed 2> gapclose.log
 ```
 
-Ссылка на ноутбук: 
+Ссылка на ноутбук: https://github.com/dpaleyev/hse22_hw1/blob/master/src/hw.ipynb
